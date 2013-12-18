@@ -22,6 +22,9 @@ public interface UtilisateurDAO {
     public boolean setUser(String log, String pwd, String newpwd, 
             String nom, String prenom, String naissance, boolean sexe,
             String description);
+    public List<UtilisateurEntity> getDemandeursDeContactUser(UtilisateurEntity e);
     public List<UtilisateurEntity> getAllUser();
     public List<UtilisateurEntity> search(String s);
+
+    public List<UtilisateurEntity> getDemandesContactVersUser(UtilisateurEntity u);
 }

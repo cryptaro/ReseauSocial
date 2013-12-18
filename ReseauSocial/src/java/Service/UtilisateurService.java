@@ -21,6 +21,9 @@ public interface UtilisateurService {
             String prenom, String naissance, boolean sexe, String description);
     public void removeUser(UtilisateurEntity u);
     public UtilisateurEntity getUserByLogin(String login);
-    public List<UtilisateurEntity> getAllUser();
+    public void demanderContact(UtilisateurEntity demandeur, UtilisateurEntity contact_demande);
+    public void annulerDemandesContact(UtilisateurEntity u, UtilisateurEntity contact_demande_annule);
+    public  List<UtilisateurEntity> getDemandesContactVersUser(UtilisateurEntity u);
     public List<UtilisateurEntity> search(String s);
+    public List<UtilisateurEntity> getAllUser();
 }
